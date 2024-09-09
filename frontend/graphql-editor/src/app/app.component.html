@@ -1,0 +1,23 @@
+
+<p> GraphQL Code </p>
+
+<div style="display: flex; flex-direction: row; gap: 15px;">
+
+    <div *ngFor="let item of schema"> 
+
+        <p> {{ item.label }} </p>
+
+        <ul>
+            <li *ngFor="let col of item.columns">
+                {{ col.label }}
+            </li>
+        </ul>
+
+    </div>
+
+    <app-monaco-editor [schema]="schema"></app-monaco-editor>
+</div>
+
+
+
+<router-outlet />
